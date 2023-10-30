@@ -1,0 +1,196 @@
+.line {
+    height: 7px;
+    width: 110px;
+    background-color: #0064d8;
+    margin: 20px 0;
+}
+
+.about-title {
+    color: #d8d8d8;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-card {
+    background-color: #111217;
+    padding: 40px 40px 0;
+    color: #d8d8d8;
+}
+
+.about-card p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: 200;
+}
+
+.about-card img {
+    width: 100%;
+}
+
+.about {
+    margin-left: 50px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.about img {
+    width: 100px;
+}
+
+.about p {
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.skills-section {
+    margin-top: 50px;
+}
+
+hr {
+    height: 5px;
+    border: none;
+    width: 100%;
+    background-color: #212227;
+}
+
+.skills-section h1 {
+    margin: 30px 0;
+}
+
+.skills-container {
+    background-color: #17181d;
+    min-height: 130px;
+    margin: 40px 0;
+    border-radius: 50px;
+    border: 1px solid #313237;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px; 
+    position: relative;
+    z-index: -1;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-name {
+    position: absolute;
+    top: -40px;
+    transform: translateX(5px);
+    background-color: #0000ff;
+    color: #d8d8d8;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #212227;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.skill-image {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    background-color: #1a1b20;
+    border: 7px solid #1e1f24;
+    border-radius: 50%;
+    width: 100px;
+}
+
+/*
+.skill-image:before, .skill-image:after {
+    border-radius: 50px;
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -11;
+    animation: borderAnimation 20s linear infinite;
+}
+*/
+
+.card {
+    padding: 30px 70px;
+    position: relative;
+}
+
+.awards-section {
+    margin-top: 30px;
+}
+
+.awards-container {
+    display: flex;
+    gap: 30px;
+}
+
+.award-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: Oswald, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.award-text {
+    opacity: 1;
+    color: rgba(216, 216, 216, .7);
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.award-year {
+    border: 1px solid #313237;
+    border-top-style: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: -18px;
+    padding: 5px 10px 10px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    display: inline-block;
+    position: absolute;
+    top: auto;
+    bottom: 50%;
+    left: -16px;
+    right: auto;
+    transform: rotate(-90deg);
+    transition: .3s all;
+}
+
+.card:hover .award-year{
+    background-color: #0064d8;
+}
+
+@media (max-width: 700px){
+    .about-container {
+        flex-direction: column;
+    }
+    .about {
+        margin-left: 0;
+    }
+    .awards-container {
+        flex-wrap: wrap;
+    }
+}

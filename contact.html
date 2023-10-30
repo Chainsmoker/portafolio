@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div class="loader loader-active">
+        <div class="loader-icon">
+            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+                viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path opacity="0.2" fill="#000"
+                    d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
+                </path>
+                <path fill="#000"
+                    d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z">
+                </path>
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20"
+                    to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform>
+            </svg>
+        </div>
+        <div class="loader-tile dark-1"></div>
+        <div class="loader-tile dark-2"></div>
+        <div class="loader-tile dark-3"></div>
+        <div class="loader-tile dark-4"></div>
+        <div class="loader-tile dark-5"></div>
+    </div>
+    <div class="container">
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="">
+                    <img src="/icons/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/work.html">Work</a>
+                <a href="/services.html">Services</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/contact.html" class="active">Contact</a>
+            </div>
+            <div id="btn-menu" class="nav-hamburger">
+                <img src="icons/menu.svg" alt="">
+            </div>
+        </nav>
+        <section>
+            <div class="page-container">
+                <div class="page-info container-center">
+                    <img src="https://uploads-ssl.webflow.com/64d0b64341df5d5d652f8857/64eca1770643323348849d4e_sitemap_contact.png" alt="">
+                    <h1>contact</h1>
+                </div>
+                <div class="page-tag container-center">
+                    <img src="https://uploads-ssl.webflow.com/64d0b64341df5d5d652f8857/64d1249428c7cbf1c3be206f_circle%20blue.png" alt="">
+                    <p>lets talk</p>
+                </div>
+            </div>
+            <div class="contact">
+                <form action="" class="contact__form aos-init aos-animate" data-aos="fade-right" data-aos-duration="2500">
+                    <div class="form__paragraph">
+                        <h2 class="subtitle">get in touch</h2>
+                        <h1 class="title">Contact.</h1>
+                    </div>
+                    <div class="form__control">
+                        <label for="form-name">Your Name</label>
+                        <input type="text" id="form-name" name="form-name" placeholder="What's your good name?">
+                    </div>
+                    <div class="form__control">
+                        <label for="form-email">Your email</label>
+                        <input type="text" id="form-email" name="form-email" placeholder="What's your web address">
+                    </div>
+                    <div class="form__control">
+                        <label for="form-message">Your Message</label>
+                        <textarea name="" id="form-message" cols="30" rows="10" placeholder="What you want to say?"></textarea>
+                    </div>
+                </form>
+                <div class="contact__model aos-init aos-animate" data-aos="fade-left" data-aos-duration="2500">
+                    <model-viewer src="earthquakes_-_2010__2011.glb" disable-pan="" oncontextmenu="return false;" disable-zoom="" ar="" auto-rotate="" camera-controls="" quick-look-browsers="safari chrome" ar-status="not-presenting"></model-viewer>
+                </div>
+            </div>
+        </section>
+        <footer>
+            All rights reserved  -  © Copyright 2023,   🌟  Powered by <a href="">Calvin</a>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

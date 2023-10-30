@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1014;
+    padding-top: 100px;
+    color: #d8d8d8;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    margin-top: 100px;
+}
+
+.active {
+    background-color: #0064d8;
+    color: #eeecec !important;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    width: 200px;
+}
+
+.nav-logo img {
+    position: relative;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    border: 1px solid #313237;
+    border-radius: 100px;
+    padding: 5px 0;
+}
+
+.nav-links a {
+    color: rgba(216, 216, 216, .5);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 15px 30px 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.nav-hamburger {
+    height: 50px;
+    width: 50px;
+    display: none;
+    z-index: 100;
+}
+
+.nav-hamburger img {
+    width: 100%;
+    height: 100%;
+}
+
+.open-menu {
+    clip-path: inset(0 0 0 0) !important;
+}
+
+@media (max-width: 830px){
+    .navigation {
+        position: fixed;
+        background-color: #0f1014;
+        width: 100%;
+        top: 0;
+        padding: 50px 0;
+        z-index: 50;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        border-radius: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        clip-path: inset(0 0 0 100%);
+        background-color: #0f1014e5;
+        justify-content: center;
+        z-index: 50;
+        transition: all .3s;
+        width: 50%;
+    }
+
+    .nav-hamburger {
+        display: block;
+        position: fixed;
+        right: 5%;
+    }
+}
+
+.page-container {
+    border: 1px solid #313237;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    padding: 7px 7px 8px;
+    position: relative;
+    background: linear-gradient(0deg, #000, #262626);
+}
+
+.page-container:before,
+.page-container:after {
+    border-radius: 50px;
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: borderAnimation 20s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.page-info {
+    gap: 20px;
+}
+
+.page-info h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.page-tag {
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    background-color: #17181d;
+    border: 2px solid #282931;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    transition: all .2s;
+    overflow: hidden;
+}
+
+.card:hover {
+    border: 2px solid #0064d8;
+}
+
+.service-circle {
+    background-image: linear-gradient(#191a1f, #27282c);
+    border: 1px solid #0064d8;
+    border-radius: 50%;
+}
+
+.service-circle img {
+    transition: transform .5s ease;
+}
+
+.card:hover .service-circle img {
+    transform: rotate(180deg);
+}
+
+.card:hover .service-circle img {
+    transform: rotate(180deg);
+    transition: transform .5s ease;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    color: #d8d8d8;
+    margin-bottom: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    transition: width 0s 1.4s ease;
+}
+
+.loader .loader-icon {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.loader .loader-icon svg {
+    transform-origin: 0 0;
+}
+
+.loader .loader-tile {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 20%;
+    transition: width 0.7s ease;
+}
+
+.dark-1 {
+    background-color: #1A1A1B;
+}
+
+.dark-2 {
+    background-color: #333F44 ;
+}
+
+.dark-3 {
+    background-color: #37AA9C;
+}
+
+.dark-4 {
+    background-color: #94F3E4;
+}
+
+.dark-5 {
+    background-color: #000;
+}
+
+.loader .loader-tile:nth-child(0) {
+    top: calc(-1 * 20%);
+    transition-delay: -0.2s;
+}
+
+.loader .loader-tile:nth-child(1) {
+    top: calc(0 * 20%);
+    transition-delay: 0s;
+}
+
+.loader .loader-tile:nth-child(2) {
+    top: calc(1 * 20%);
+    transition-delay: 0.2s;
+}
+
+.loader .loader-tile:nth-child(3) {
+    top: calc(2 * 20%);
+    transition-delay: 0.4s;
+}
+
+.loader .loader-tile:nth-child(4) {
+    top: calc(3 * 20%);
+    transition-delay: 0.6s;
+}
+
+.loader .loader-tile:nth-child(5) {
+    top: calc(4 * 20%);
+    transition-delay: 0.8s;
+}
+
+.loader-active {
+    width: 100%;
+    transition-delay: 0s;
+}
+
+.loader-active .loader-icon {
+    opacity: 1;
+    transition: opacity 0.5s 1.4s ease;
+}
+
+.loader-active .loader-tile {
+    width: 100%;
+}
+
+.loader-active .loader-tile:nth-child(0) {
+    transition-delay: -0.2s;
+}
+
+.loader-active .loader-tile:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.loader-active .loader-tile:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.loader-active .loader-tile:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.loader-active .loader-tile:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.loader-active .loader-tile:nth-child(5) {
+    transition-delay: 0.8s;
+}

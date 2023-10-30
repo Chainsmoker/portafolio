@@ -1,0 +1,50 @@
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex: 0 1 calc(49% - 6.66px);
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+
+.service-circle {
+    width: 250px;
+}
+
+.service-circle img {
+    padding: 40px;
+}
+
+.service-info h1 {
+    text-transform: capitalize;
+    font-size: 29px;
+    font-weight: 300;
+
+}
+
+.service-info p {
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 28px;
+}
+
+@media (max-width: 975px) {
+    .card {
+        flex: 0 1 100%;
+       justify-content: flex-start;
+    }
+
+    .service-image {
+        width: 170px;
+    }
+}
